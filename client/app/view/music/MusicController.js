@@ -1,11 +1,9 @@
 Ext.define('App.view.music.MusicController', {
     extend: 'App.view.widgets.BrowseController',
     alias: 'controller.musicbrowse',
-
-
     control: {
         "#": {
-            reset: 'refesh'
+            reset: 'refresh'
         }
     },
 

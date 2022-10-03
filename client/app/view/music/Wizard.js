@@ -6,12 +6,21 @@ Ext.define('App.view.music.Wizard', {
         'musicedit'
     ],
 
+    controller: {
+        type: 'musicwizard'
+    },
+
+    viewModel: {
+        type: 'musicwizard'
+    },
     bind: {
         title: '{record.phantom? "Add" : "Edit"} Music'
     },
 
     cls: 'music-create',
-    screens: [{ 
+
+    screens: [
+        { 
         title: 'General',
         iconCls: 'x-fa fa-info',
         items: [{
@@ -57,40 +66,43 @@ Ext.define('App.view.music.Wizard', {
             listeners: {
                 blur: 'onNameFieldsBlur'
             }
+        },
+        ]
+    },
+    {
+        title: 'About',
+        iconCls: 'fal fa-address-card',
+        items: [{
+            xtype: 'textfield',
+            label: "RowId",
+            labelCls: 'form-label font-weight-bold w-full mb-3px',
+            bind: '{record.id}',
+            disabled: true,
         },{
-            title: 'About',
-            iconCls: 'fal fa-address-card',
-            items: [{
-                xtype: 'textfield',
-                label: "RowId",
-                labelCls: 'form-label font-weight-bold w-full mb-3px',
-                bind: '{record.id}',
-                disabled: true,
-            },{
-                xtype: 'textfield',
-                label: "Created",
-                labelCls: 'form-label font-weight-bold w-full mb-3px',
-                bind: '{record.createdAt || record.created_date}',
-                disabled: true,
-            },{
-                xtype: 'textfield',
-                label: "Created By",
-                labelCls: 'form-label font-weight-bold w-full mb-3px',
-                bind: '{record.createdByName ||record.created_By}',
-                disabled: true,
-            },{
-                xtype: 'textfield',
-                label: "Last Updated",
-                labelCls: 'form-label font-weight-bold w-full mb-3px',
-                bind: '{record.updatedAt || record.last_Updated}',
-                disabled: true,
-            },{
-                xtype: 'textfield',
-                label: "Last Updated By",
-                labelCls: 'form-label font-weight-bold w-full mb-3px',
-                bind: '{record.updatedByName || record.last_Updated_By}',
-                disabled: true,
-            }]
+            xtype: 'textfield',
+            label: "Created",
+            labelCls: 'form-label font-weight-bold w-full mb-3px',
+            bind: '{record.createdAt || record.created_date}',
+            disabled: true,
+        },{
+            xtype: 'textfield',
+            label: "Created By",
+            labelCls: 'form-label font-weight-bold w-full mb-3px',
+            bind: '{record.createdByName ||record.created_By}',
+            disabled: true,
+        },{
+            xtype: 'textfield',
+            label: "Last Updated",
+            labelCls: 'form-label font-weight-bold w-full mb-3px',
+            bind: '{record.updatedAt || record.last_Updated}',
+            disabled: true,
+        },{
+            xtype: 'textfield',
+            label: "Last Updated By",
+            labelCls: 'form-label font-weight-bold w-full mb-3px',
+            bind: '{record.updatedByName || record.last_Updated_By}',
+            disabled: true,
         }]
-    }]
+    }
+]
 })
