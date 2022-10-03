@@ -27,5 +27,11 @@ Ext.define('App.store.Menu', {
         xtype: 'historybrowse',
         text: 'Activity',
         icon: 'history'
-    }]
+    },{
+        id:'musics',
+        xtype: 'musicbrowse',
+        text: 'Music',
+        icon: 'music',
+    }
+]
 });

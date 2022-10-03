@@ -1,0 +1,24 @@
+.music-tools {
+    z-index: 1;
+
+    > .x-body-el {
+        padding: 12px 8px 24px 8px;
+    }
+
+    @media screen and (min-width: 600px) {
+        .x-toolbar {
+            margin-left: $show-header-picture-size + $show-header-spacing * 2;
+            margin-right: $show-header-spacing;
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        margin-top: -38px;
+
+        > .x-body-el {
+            flex-direction: column;
+            padding-bottom: 0;
+        }
+
+    }
+}

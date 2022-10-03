@@ -7,14 +7,14 @@ Ext.define('App.view.main.MainController', {
             action: 'handleNavigationRoute',
             conditions: {
                 // NOTE(SB): how to build this list automatically from the Menu store?
-                ':type': '(history|home|offices|organizations|people)',
+                ':type': '(history|home|offices|organizations|people|musics|)',
                 ':args': '(.*)'
             }
         },
         ':type/:id(/:args)?': {
             action: 'handleDataRoute',
             conditions: {
-                ':type': '(office|organization|person)',
+                ':type': '(office|organization|person|music|)',
                 ':id': '([a-f0-9-]{36}|create|edit)',
                 ':args': '(.*)'
             }

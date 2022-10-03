@@ -8,7 +8,10 @@ Ext.define('App.profile.Phone', {
         organizationbrowse: 'App.view.phone.organization.Browse',
         personbrowse: 'App.view.phone.person.Browse',
         personbrowsefilters: 'App.view.phone.person.BrowseFilters',
-        personlistswiperitem: 'App.view.phone.person.ListSwiperItem'
+        personlistswiperitem: 'App.view.phone.person.ListSwiperItem',
+
+        musicbrowse: 'App.view.tablet.music.Music',
+        
     },
 
     isActive: function () {

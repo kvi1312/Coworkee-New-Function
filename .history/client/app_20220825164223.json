@@ -1,0 +1,206 @@
+{
+  /**
+     * The application's namespace.
+     */
+  "name": "App",
+  /**
+     * The version of the application.
+     */
+  "version": "1.0.0.0",
+  /**
+     * The relative path to the application's markup file (html, jsp, asp, etc.).
+     */
+  "indexHtmlPath": "index.html",
+  /**
+     * Comma-separated string with the paths of directories or files to search. Any classes
+     * declared in these locations will be available in your class "requires" or in calls
+     * to "Ext.require". The "app.dir" variable below is expanded to the path where the
+     * application resides (the same folder in which this file is located).
+     */
+  "classpath": [
+    "app"
+  ],
+  /**
+     * Comma-separated string with the paths of directories or files to search. Any classes
+     * declared in these locations will be automatically required and included in the build.
+     * If any file defines an Ext JS override (using Ext.define with an "override" property),
+     * that override will in fact only be included in the build if the target class specified
+     * in the "override" property is also included.
+     */
+  "overrides": [
+    "overrides"
+  ],
+  /**
+     * The Sencha Framework for this application: "ext" or "touch".
+     */
+  "framework": "ext",
+  /**
+     * The toolkit to use. Select either "classic" or "modern".
+     */
+  "toolkit": "modern",
+  /**
+     * The name of the theme for this application.
+     */
+  "theme": "coworkee",
+  /**
+     * The list of required packages (with optional versions; default is "latest").
+     *
+     * For example,
+     *
+     *      "requires": [
+     *          "charts"
+     *      ]
+     */
+  "requires": [
+    "font-awesome",
+    "google"
+  ],
+  "mashup": {
+    "map": {
+      /**
+             * Use your own Google Maps API key by modifying the following options,
+             * for example: "options": "?v=3&key=google_maps_api_key". The key can
+             * be generated from the Google API Console.
+             * https://console.developers.google.com/apis/credentials)
+             */
+      "options": "?v=3"
+    },
+
+    "redirect": {
+      "//maps.googleapis.com/maps/api/js{options}": "https://maps.googleapis.com/maps/api/js{options}"
+    }
+  },
+
+  "fashion": {
+    "inliner": {
+
+      "enable": false
+    }
+  },
+
+  "sass": {
+
+    "namespace": "App",
+
+    "generated": {
+      "var": "sass/save.scss",
+      "src": "sass/save"
+    },
+
+    "etc": [
+      "sass/etc/all.scss"
+    ],
+
+    "var": [
+      "sass/var/all.scss",
+      "sass/var"
+    ],
+
+    "src": [
+      "sass/src"
+    ]
+  },
+
+  "js": [
+    {
+      "path": "app.js",
+      "bundle": true
+    },
+    {
+
+      "path": "api/",
+      "remote": true
+    }
+  ],
+
+  "css": [
+    {
+     
+      "path": "${build.out.css.path}",
+      "bundle": true,
+      "exclude": [
+        "fashion"
+      ]
+    }
+  ],
+
+  "loader": {
+  
+    "cache": false,
+
+    "cacheParam": "_dc"
+  },
+
+  "production": {
+    "output": {
+      "appCache": {
+        "enable": true,
+        "path": "cache.appcache"
+      }
+    },
+    "loader": {
+      "cache": "${build.timestamp}"
+    },
+    "cache": {
+      "enable": true
+    },
+    "compressor": {
+      "type": "yui"
+    }
+  },
+
+  "testing": {},
+
+  "development": {
+    "watch": {
+      "delay": 250
+    }
+  },
+
+  "bootstrap": {
+    "base": "${app.dir}",
+    "microloader": "bootstrap.js",
+    "css": "bootstrap.css"
+  },
+
+  "output": {
+    "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+    "appCache": {
+      "enable": false
+    }
+  },
+
+  "cache": {
+    "enable": false,
+    "deltas": true
+  },
+
+  "appCache": {
+
+    "cache": [
+      "index.html"
+    ],
+
+    "network": [
+      "*"
+    ],
+
+    "fallback": []
+  },
+
+  "resources": [
+    {
+      "path": "resources",
+      "output": "shared"
+    }
+  ],
+
+  "archivePath": "archive",
+  "slicer": null,
+ 
+  "ignore": [
+    "(^|/)CVS(/?$|/.*?$)"
+  ],
+
+  "id": "57beb200-5617-4821-9819-6d7e3a39bf66"
+}

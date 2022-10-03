@@ -9,8 +9,12 @@ Ext.define('App.profile.Tablet', {
         officebrowsetoolbar: 'App.view.tablet.office.BrowseToolbar',
         organizationbrowse: 'App.view.tablet.organization.Browse',
         organizationbrowsetoolbar: 'App.view.tablet.organization.BrowseToolbar',
+
         personbrowse: 'App.view.tablet.person.Browse',
-        personbrowsetoolbar: 'App.view.tablet.person.BrowseToolbar'
+        personbrowsetoolbar: 'App.view.tablet.person.BrowseToolbar',
+
+        musicbrowse: 'App.view.tablet.music.Music',
+        musicbrowsetoolbar: 'App.view.tablet.music.MusicToolbar'
     },
 
     isActive: function () {

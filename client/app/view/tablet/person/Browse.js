@@ -1,6 +1,6 @@
 Ext.define('App.view.tablet.person.Browse', {
     extend: 'App.view.person.Browse',
-    // xtype: 'personbrowse', -- set by profile
+
 
     requires: [
         'Ext.plugin.ListPaging'
@@ -99,9 +99,11 @@ Ext.define('App.view.tablet.person.Browse', {
                 '<div class="item-info"><span class="x-fa fa-phone"></span> {phone}</div>'
             ]
         }],
-
+ 
         listeners: {
             childdoubletap: 'onChildActivate'
-        }
+        },
+
+        
     }]
 });

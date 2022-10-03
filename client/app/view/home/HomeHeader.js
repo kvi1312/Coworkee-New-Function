@@ -39,6 +39,7 @@ Ext.define('App.view.home.HomeHeader', {
                         '<a class="link" href="#{url}">{fullname}</a>',
                     '</div>',
                 '</tpl>',
+
                 '<tpl for="organization">',
                     '<div class="item">',
                         '<span class="icon x-fa fa-sitemap"></span>',
@@ -46,13 +47,22 @@ Ext.define('App.view.home.HomeHeader', {
                         '<a class="link"  href="#{url}">{name}</a>',
                     '</div>',
                 '</tpl>',
+
                 '<tpl for="office">',
                     '<div class="item">',
                         '<span class="icon x-fa fa-globe"></span>',
                         '<div class="title">Office</div>',
                         '<a class="link" href="#{url}">{name}</a>',
                     '</div>',
-                '</tpl>'
+                '</tpl>',
+                
+                // '<tpl for="music">',
+                //     '<div class="item">',
+                //         '<span class="icon x-fa fa-music"></span>',
+                //         '<div class="title">music</div>',
+                //         '<a class="link" href="#{url}">{name}</a>',
+                //     '</div>',
+                // '</tpl>',
             ],
             bind: {
                 record: '{user}'

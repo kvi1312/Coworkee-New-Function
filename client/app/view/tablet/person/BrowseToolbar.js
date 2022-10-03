@@ -1,6 +1,6 @@
 Ext.define('App.view.tablet.person.BrowseToolbar', {
     extend: 'App.view.widgets.BrowseToolbar',
-    // xtype: 'personbrowsetoolbar', -- set by profile
+
 
     items: {
         organizations: {

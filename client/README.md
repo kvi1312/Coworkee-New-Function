@@ -54,3 +54,42 @@ This folder contains one [local package](http://docs.sencha.com/cmd/guides/cmd_p
 
 ### `./build`
 This folder contains the output of the build, inclucing generated CSS files, consolidated resources and concatenated JavaScript files.
+
+
+
+
+# LỆNH TRÊN VIM
+  - ESC : control mode
+ - . : lặp lại thao tác ở normalmode
+  - ":" : bật chế độ lệnh vim
+ 
+    wq : lưu và thoát file
+
+    vim : tạo file mới
+
+    e + filename : mở filename
+    
+    27 : di chuyển đến dòng 2
+
+ - J/H/K/L : di chuyển lên xuống qua lại
+
+ - Shift + A : di chuyển cuối dòng
+ 
+ - cw:  xoá
+
+ - Space Space J : hiện thao tác di chuyển nhanh
+
+ - E : di chuyển tới cuối từ
+
+ - dd : xoá
+
+ - ddd: xoá nguyên dòng
+
+ - B : di chuyển đầu từ
+ 
+ - O : di chuyển đầu dòng 
+
+
+
+  -- NẾU UPDATE LỖI: coi chừng lỗi file controller\
+  -- coi chung sai tablet/music phan tbar xtype

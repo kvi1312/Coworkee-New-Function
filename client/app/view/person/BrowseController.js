@@ -9,6 +9,7 @@ Ext.define('App.view.person.BrowseController', {
     },
 
     refresh: function() {
+        
         var vm = this.getViewModel();
         vm.getStore('offices').reload();
         vm.getStore('organizations').reload();

@@ -1,0 +1,17 @@
+.music-header {
+    overflow: visible;
+
+    > .x-body-el {
+        overflow: visible;
+    }
+
+    @media screen and (max-width: 599px) {
+        > .x-body-el {
+            padding-bottom: 32px;
+        }
+
+        .header-title {
+            text-align: center;
+        }
+    }
+}

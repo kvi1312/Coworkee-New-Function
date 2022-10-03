@@ -59,13 +59,16 @@ Ext.define('App.view.person.ShowTools', {
                 tooltip: 'See <b>{record.linkedin}</b> LinkedIn profile'
             }
         }]
-    }, {
+    }, 
+    
+    {
         xtype: 'component',
         cls: 'location',
         tpl: [
             '<div class="city"><span class="x-fa fa-map-marker"></span> {office.city}</div>'
             //'<div class="time"><span class="x-fa fa-clock-o"></span> 11:00 pm</div>'
         ],
+
         bind: {
             record: '{record}'
         }

@@ -7,6 +7,7 @@ Ext.define('App.model.Base', {
         'Ext.direct.RemotingProvider',
         'Ext.data.identifier.Uuid'
     ],
+    
 
     fields: [
         // Calculated fields
