@@ -9,7 +9,7 @@ Ext.define('App.view.music.Music', {
 
     cls: 'musicbrowse',
     bind: {
-        store: '{musics}'
+        store: '{music}'
     }
 })
 

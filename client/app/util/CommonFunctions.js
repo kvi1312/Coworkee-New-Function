@@ -102,4 +102,32 @@ Ext.define('CommonFuntions', {
     
         return ('<a class="class-delete icon-' + clsName + '" id="' + id + '"><i class="' + icon + ' cursor-button"></i></a>');
       },
+
+      reloadGrid: function (store, currentForm, viewStore) {
+        store.clearData();
+        store.load();
+        if (typeof currentForm.getStore === 'function') {
+          var store = currentForm.getStore(viewStore);
+          if (store) {
+
+            store.proxy.extraParams.reload = true;
+            store.isFull = false;
+            
+            store.reload({
+              scope: this,
+              callback: function (records, operation, success) {
+               
+                store.proxy.extraParams.reload = false;
+              },
+            });
+          }
+        }
+      },
+      
+      navigateToHome: function () {
+        if (window && window.location && window.location.hash) {
+          window.location.hash = '#home';
+          Ext.Viewport.setMasked(false);
+        }
+      },
 })

@@ -1,6 +1,5 @@
 Ext.define('App.view.tablet.music.Music', {
     extend: 'App.view.music.Music',
-
     requires: [
         'Ext.plugin.ListPaging'
     ],
@@ -14,7 +13,8 @@ Ext.define('App.view.tablet.music.Music', {
     items: [{
         xtype: 'grid',
         emptyText:'No song was found to match your search',
-        bind: '{musics}',
+        itemId: "musicGridView",
+        bind: '{music}',
         ui: 'listing',
         collapsible: false,
         variableHeights: true,
@@ -23,10 +23,10 @@ Ext.define('App.view.tablet.music.Music', {
             disable:true,
         },
 
-        plugins: [{
-            type: 'listpaging',
-            autoPaging: true
-        }],
+        // plugins: [{
+        //     type: 'listpaging',
+        //     autoPaging: true
+        // }],
 
         columnMenu: {
             items: {
@@ -91,22 +91,27 @@ Ext.define('App.view.tablet.music.Music', {
             align: 'center',
             hideable: false,
             flex: 0.5,
+          cls: 'common-action',
+
             id: 'action-column-music',
             columns: [{
                 align: 'right',
                 id: 'edit_music',
+                iconCls: 'far fa-pen',
                 flex: 0.5,
                 cell: {
                     encodeHtml: false
                 },
-                renderer: function (params) {
-                    return CommonFunctions.addActionButton('edit');
+                listeners : {
+                    click  : 'onEdit'
                 }
             },
             {
                 align: 'left',
                 id: 'delete_music',
                 dataIndex: 'active',
+                iconCls: 'far fa-trash',
+
                 flex: 0.5,
                 cell: {
                     encodeHtml: false
@@ -120,13 +125,15 @@ Ext.define('App.view.tablet.music.Music', {
               cell: {
                   encodeHtml: false
               },
-              renderer: function (params){
-                  return CommonFunctions.addActionButton('softDelete');
-              }
+            //   renderer: function (params){
+            //       return CommonFunctions.addActionButton('softDelete');
+            //   }
             }
             ]}
-    ]
+    ],
+    
+    listeners: {
+        childdoubletap: 'onChildActivate'
+    },
     }]
 })
-
-console.log('object');

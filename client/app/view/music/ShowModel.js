@@ -3,7 +3,6 @@ Ext.define('App.view.music.ShowModel', {
     alias: 'viewmodel.musicshow',
 
     stores: {
-        markers: {},
 
         history: {
             type: 'actions',

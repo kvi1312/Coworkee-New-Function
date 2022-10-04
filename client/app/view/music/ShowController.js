@@ -10,6 +10,7 @@ Ext.define('App.view.music.ShowController', {
         var viewModel = this.getViewModel(),
 
             history = viewModel.getStore('history')
+            history.load();
 
             if(record){
                 history.filter('recipient_id', record.get('id'));

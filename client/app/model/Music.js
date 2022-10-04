@@ -8,9 +8,19 @@ Ext.define('App.model.Music',{
         { name: "description", type: "string" },
       ],
 
-    proxy: {
+      proxy: {
         api: {
             prefix: 'Server.music'
+        }
+    },
+    
+    statics: {
+        load: function (id , options, session){
+        var record = Ext.create('App.model.Music')
+        record.setSession(session)
+        record.load(
+        Ext.apply({params: {id: id}}, options)
+    )
         }
     }
 })

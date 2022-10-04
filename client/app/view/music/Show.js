@@ -9,24 +9,47 @@ Ext.define('App.view.music.Show', {
 
     title: 'Music',
 
+    // items: {
+    //     header: {
+    //         items: {
+    //             title: {
+    //                 tpl: [
+    //                     '<div class="x-fa fa-music"></div>',
+    //                     '<div class="name">{name}</div>',
+    //                     '<div class="desc">Song: {name} - {author}</b><div>'
+    //                 ]
+    //             }
+    //         }
+    //     },
+
+    //     content: {
+    //         items: {
+    //             left: {
+    //                 details: {
+    //                     xtype: 'musicshowdetails'
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
     items: {
         header: {
-            items: {
-                title: {
-                    tpl: [
-                        '<div class="x-fa fa-music"></div>',
-                        '<div class="name">{name}</div>',
-                        '<div class="desc">Song: {name} - {author}</b><div>'
-                    ]
-                }
-            }
+            xtype: "musicshowheader"
         },
 
-        content: {
+        tools: {
+            xtype: "musicshowheader",
+            weight: 5,
+        },
+
+        content:{
             items: {
                 left: {
-                    details: {
-                        xtype: 'musicshowdetails'
+                    items: {
+                        details: {
+                            xtype: 'musicshowdetails',
+                        }
                     }
                 }
             }

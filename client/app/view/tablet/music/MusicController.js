@@ -14,5 +14,8 @@ Ext.define('App.view.tablet.music.MusicController', {
                 docked: 'bottom'
             }
         }).show();
+    },
+    onEdit: function (){
+        return this.redirectTo("music/edit")
     }
 })

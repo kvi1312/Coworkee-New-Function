@@ -46,5 +46,9 @@ Ext.define('App.model.Base', {
 
     toEditUrl: function() {
         return this.toUrl() + '/edit';
+    },
+
+    toDeleteUrl: function() {
+        return this.toUrl() + '/delete'
     }
 });

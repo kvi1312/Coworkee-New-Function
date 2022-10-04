@@ -3,8 +3,8 @@ Ext.define('App.view.music.MusicModel', {
     alias: 'viewmodel.musicbrowse',
 
     stores: {
-        musics: {
-            type: 'musics',
+        music: {
+            type: 'music',
             grouper: {
                 groupFn: function (record) {
                     return record.get('name')[0];
