@@ -9,11 +9,10 @@ Ext.define('App.model.Music',{
       ],
 
       proxy: {
-        api: {
-            prefix: 'Server.music'
-        }
+        api: "http://localhost:5001/api/music/list"
     },
-    
+
+
     statics: {
         load: function (id , options, session){
         var record = Ext.create('App.model.Music')

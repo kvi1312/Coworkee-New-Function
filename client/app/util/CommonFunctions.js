@@ -1,5 +1,6 @@
-Ext.define('CommonFuntions', {
+Ext.define('App.util.CommonFuntions', {
     singleton: true,
+
     
     formatDateOfTimeZoneSupport: function (date, format = null) {
         var me = this;
@@ -129,5 +130,64 @@ Ext.define('CommonFuntions', {
           window.location.hash = '#home';
           Ext.Viewport.setMasked(false);
         }
+      },
+
+      addActionButton: function (icon, id, tooltip, obj) {
+        var clsName = icon;
+        switch (icon) {
+          // case 'deactive':
+          //   icon = 'fas fa-times-octagon icon-deactive';
+          //   tooltip = Translate.translate('UI.DeActive', false);
+          //   id = 'DeactiveAction';
+          //   break;
+          // case 'active':
+          //   icon = 'far fa-check-circle icon-active';
+          //   tooltip = Translate.translate('UI.Active', false);
+          //   id = 'ActiveAction';
+          //   break;
+          case 'delete': //Permanently Delete
+            icon = 'fas fa-trash';
+            tooltip = Translate.translate('UI.PermanentlyDelete', false);
+            id = 'DeleteAction';
+            break;
+          case 'edit':
+            icon = 'far fa-edit';
+            tooltip = Translate.translate('UI.Edit', false);
+            id = 'EditAction';
+            break;
+          case 'help':
+            icon = 'fa fa-question-circle';
+            if (CommonFunctions.isNullOrEmpty(tooltip)) {
+              return '&nbsp;&nbsp;';
+            } else {
+              if (CommonFunctions.isPhone() && obj && obj.el && typeof obj.el.on === 'function') {
+                obj.el.on({
+                  mousedown: function () {
+                    var tip = new Ext.tip.ToolTip({
+                      target: id,
+                      html: tooltip,
+                      dismissDelay: 2000,
+                      showDelay: 0,
+                      hideDelay: 2000,
+                      autoHide: true,
+                    });
+                    tip.show();
+                  },
+                });
+              }
+              return ('<a class="class-delete" id="' + id + '"><i class="' + icon + ' cursor-button"></i></a>');
+            }
+          default:
+            break;
+        }
+    
+        // Change to random + to make it more random
+        id = id + this.getRandomString(1000) + Ext.Number.randomInt(0, 10000) + this.getRandomString(1000) + Ext.Number.randomInt(0, 10000);
+    
+        setTimeout(() => {
+          this.showTooltip(id, tooltip);
+        }, 0);
+    
+        return ('<a class="class-delete icon-' + clsName + '" id="' + id + '"><i class="' + icon + ' cursor-button"></i></a>');
       },
 })

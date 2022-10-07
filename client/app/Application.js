@@ -7,7 +7,8 @@ Ext.define('App.Application', {
     // require all application classes (App.*) and avoid redundant 'requires' in each files.
     requires: [
         'App.*',
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        // 'Ext.CommonFuntions'
     ],
 
     profiles: [

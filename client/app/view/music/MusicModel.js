@@ -5,11 +5,11 @@ Ext.define('App.view.music.MusicModel', {
     stores: {
         music: {
             type: 'music',
-            grouper: {
-                groupFn: function (record) {
-                    return record.get('name')[0];
-                }
-            }
+            // grouper: {
+            //     groupFn: function (record) {
+            //         return record.get('name')[0];
+            //     }
+            // }
         },
         
     }

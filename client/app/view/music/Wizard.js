@@ -3,7 +3,8 @@ Ext.define('App.view.music.Wizard', {
     xtype: [
         'musicwizard',
         'musiccreate',
-        'musicedit'
+        'musicedit',
+        "musicdelete"
     ],
 
     controller: {

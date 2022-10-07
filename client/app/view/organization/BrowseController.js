@@ -15,5 +15,9 @@ Ext.define('App.view.organization.BrowseController', {
 
     onCreate: function() {
         this.redirectTo('organization/create');
+    },
+
+    onDelete: function(){
+        console.log("object");
     }
 });

@@ -3,7 +3,7 @@ Ext.define('App.view.music.ShowModel', {
     alias: 'viewmodel.musicshow',
 
     stores: {
-
+        // Music: musicStores,
         history: {
             type: 'actions',
             pageSize: 12

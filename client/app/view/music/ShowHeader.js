@@ -32,7 +32,7 @@ Ext.define('App.view.music.ShowHeader', {
     items: {
         title: {
             tpl: [
-                '<div class= "name"> <b>{name}</b></div>',
+                '<div class= "name"><b>{name}</b></div>',
                 '<div class ="desc">{author}</div>'
             ]
         }

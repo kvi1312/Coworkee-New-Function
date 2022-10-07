@@ -170,6 +170,10 @@ body.launching {
     }
 }
 
+.common-action .x-gridcolumn .x-header-el {
+    display: none;
+}
+
 .x-dataview-thumbnails {
     .x-dataview-item {
         .thumbnail {
